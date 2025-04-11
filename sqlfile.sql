@@ -1,4 +1,4 @@
-use auctionsystem;
+use railway;
 
 CREATE TABLE users (
     user_id BIGINT AUTO_INCREMENT PRIMARY KEY,
@@ -55,13 +55,13 @@ INSERT INTO users (name, email, password, role) VALUES
 ('Bob Johnson', 'bob@example.com', 'hashedpassword3', 'BIDDER');
 
 -- Insert Auctions (Conducted by Auctioneers)
-INSERT INTO auctions (auctioneer_id, auction_type, auction_date) VALUES
-(1, 'CRICKET', '2024-03-31 14:00:00'),
-(1, 'ANTIQUES', '2024-04-01 15:00:00');
+INSERT INTO auctions (name, auction_type, auction_date) VALUES
+('Chompions trophy 2025', 'CRICKET', '2025-03-31 14:00:00'),
+('Antiques on sales', 'ANTIQUES', '2025-06-01 15:00:00');
 
 -- Insert Items (Associated with Auctions)
 INSERT INTO items (auction_id, name, description, starting_price, status, winner_bidder_id) VALUES
-(1, 'Cricket Bat', 'Signed bat by a famous player', 1000.00, 'AVAILABLE', NULL),
+(1, 'Shikar Dhawan', 'Left handed batsman', 100000.00, 'AVAILABLE', NULL),
 (2, 'Vintage Watch', 'Rare 1920s vintage watch', 5000.00, 'AVAILABLE', NULL);
 
 -- Insert Bidders Registration (Users registering for Auctions)
